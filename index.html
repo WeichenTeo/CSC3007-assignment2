@@ -192,12 +192,12 @@
 					    .style("text-anchor", "end");
 
 					o = d3.scaleLinear()
-					  .domain([0.15, 0.7])
-					  .range([ 0.4 , 1]);
+					  .domain([0.15, 0.45])
+					  .range([ 0.5 , 1]);
 
 					o_reverse = d3.scaleLinear()
-					  .domain([0.15, 0.7])
-					  .range([ 1 , 0.4]);
+					  .domain([0.55, 0.85])
+					  .range([ 1 , 0.5]);
 
 					y = d3.scaleLinear()
 					  .domain([0, maxValue])
@@ -266,7 +266,7 @@
 					let year = scale(sliderValue, 0, 100, minYear, maxYear)
 					let decimal = year - parseInt(year)
 					let sliderText = "Display Year: "
-					if(decimal < 0.15 || decimal > 0.75){
+					if(decimal < 0.15 || decimal > 0.85){
 						sliderText += Math.round(year)
 						plotgraph(records[Math.round(year)], Math.round(year))
 					}
